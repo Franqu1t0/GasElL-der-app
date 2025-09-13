@@ -18,6 +18,46 @@
         .container {
             @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
         }
+        /* Definir la animación de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Aplicar la animación a elementos con la clase 'animate-fade-in-up' */
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        /* Definir la animación de pulso */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        /* Aplicar la animación a elementos con la clase 'animate-pulse-once' */
+        .animate-pulse-once {
+            animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .image-container {
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -36,13 +76,13 @@
     </header>
 
     <main>
-        <!-- Sección Principal (Hero) -->
+        <!-- Sección Principal (Hero) con animación -->
         <section class="bg-blue-600 text-white py-12 sm:py-20 lg:py-24">
             <div class="container text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
                     ¡Distribuidora de gas El Lider!
                 </h1>
-                <p class="text-xl sm:text-2xl mb-8 font-light">
+                <p class="text-xl sm:text-2xl mb-8 font-light opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
                     Tu gas a domicilio en SMP, Los Olivos , Carmen de la Legua y Rímac.
                 </p>
             </div>
@@ -96,7 +136,7 @@
             </div>
         </section>
 
-        <!-- Nueva Sección de Servicios -->
+        <!-- Nueva Sección de Servicios con Ilustraciones -->
         <section class="py-12 sm:py-20 bg-gray-100" id="services">
             <div class="container text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-12">
@@ -105,39 +145,41 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Nueva Tarjeta de Servicio 5kg -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón de 5kg">
-                        <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
-                           <img src="https://storage.googleapis.com/gino-assets/image_1f05d7.jpg" alt="Balón de gas de 5 kg" class="w-full h-auto object-cover">
+                        <div class="image-container rounded-lg mb-4 bg-gray-200">
+                           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Ilustración de un balón de gas de 5 kg" class="service-image">
                         </div>
                         <h3 class="text-xl font-bold mb-2 mt-4">Balones de 5 Kilos</h3>
                         <p class="text-gray-600">Ideales para espacios pequeños o para uso de una sola persona, con la calidad de siempre.</p>
                     </div>
                     <!-- Tarjeta de Servicio 10kg -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón de 10kg">
-                        <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
-                            <img src="https://storage.googleapis.com/gino-assets/image_1ef755.jpg" alt="Balón de gas de 10 kg" class="w-full h-auto object-cover">
+                        <div class="image-container rounded-lg mb-4 bg-gray-200">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Ilustración de un balón de gas de 10 kg" class="service-image">
                         </div>
                         <h3 class="text-xl font-bold mb-2 mt-4">Entrega de Gas a Domicilio</h3>
                         <p class="text-gray-600">Servicio de reparto rápido y seguro para tu hogar en toda nuestra zona de cobertura.</p>
                     </div>
                     <!-- Tarjeta de Servicio 45kg (Negocios) -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón de 45kg">
-                         <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
-                            <img src="https://storage.googleapis.com/gino-assets/image_141172.jpg" alt="Balón de gas de 45 kg para negocios" class="w-full h-auto object-cover">
+                         <div class="image-container rounded-lg mb-4 bg-gray-200">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Ilustración de un balón de gas de 45 kg para negocios" class="service-image">
                         </div>
                         <h3 class="text-xl font-bold mb-2 mt-4">Gas para Negocios y Empresas</h3>
                         <p class="text-gray-600">Atención prioritaria y precios especiales para restaurantes, comedores y otros establecimientos.</p>
                     </div>
-                    <!-- Tarjeta de Servicio 3: Balones para Montacargas -->
+                    <!-- Tarjeta de Servicio: Balones para Montacargas -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón para montacargas">
-                         <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
-                            <img src="https://storage.googleapis.com/gino-assets/image_1e0a3a.jpg" alt="Balón de gas para montacargas" class="w-full h-auto object-cover">
+                         <div class="image-container rounded-lg mb-4 bg-gray-200">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Ilustración de un balón de gas para montacargas" class="service-image">
                         </div>
                         <h3 class="text-xl font-bold mb-2 mt-4">Balones para Montacargas</h3>
                         <p class="text-gray-600">Abastecemos de gas GLP para montacargas industriales, con la calidad y seguridad que requieres.</p>
                     </div>
-                    <!-- Tarjeta de Servicio 5: Instalación y Revisión -->
+                    <!-- Tarjeta de Servicio: Instalación y Revisión -->
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Instalación y Revisión">
-                        <img src="https://storage.googleapis.com/gino-assets/image_139cf1.jpg" alt="Instalación y revisión de un balón de gas" class="w-full h-auto rounded-lg mb-4">
+                        <div class="image-container rounded-lg mb-4 bg-gray-200">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Ilustración de una persona instalando un balón de gas" class="service-image">
+                        </div>
                         <h3 class="text-xl font-bold mb-2 mt-4">Servicio de Instalación y Revisión</h3>
                         <p class="text-gray-600">Nuestro personal capacitado realiza la instalación segura y revisión de tus balones de gas, este servicio es completamente gratuito.</p>
                     </div>
@@ -198,7 +240,7 @@
                                 <option value="Premium">Premium</option>
                             </select>
                         </div>
-                        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg animate-pulse-once">
                             Enviar Pedido por WhatsApp
                         </button>
                     </form>
