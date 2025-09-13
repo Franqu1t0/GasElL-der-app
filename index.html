@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora de gas El Lider</title>
+    <!-- Incluir Tailwind CSS CDN para el estilo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font "Inter" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        .container {
+            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Sección de Cabecera (Header) -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Ícono simple de llama como logo SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.87 18.23a1.53 1.53 0 0 0 .54-.25c.34-.23.68-.45 1.05-.67 1.25-.76 2.65-1.54 3.73-2.73a4.13 4.13 0 0 0 1.29-2.92c-.08-.94-.37-1.74-.74-2.45a5.53 5.53 0 0 0-1.8-1.99c-.93-.56-1.92-.93-3.1-1.12a6.32 6.32 0 0 0-2.43.08c-.73.23-1.46.54-2.14.92-.8.47-1.53.94-2.22 1.48-1.57 1.25-3.1 2.9-3.92 4.67C2.18 16.5 2 17.65 2 19s.42 2.5 1.24 3.5c.98 1.25 2.55 2.2 4.1 2.38 1.53.18 2.87-.27 4.16-1.29l.06-.05c.87-.71 1.7-1.51 2.5-2.26 1.1-.96 2.1-1.94 3.03-2.96.96-1.03 1.83-2.14 2.56-3.26a1.9 1.9 0 0 0 .61-1.13c.12-.58.1-1.16-.02-1.72a3.46 3.46 0 0 0-.6-1.25c-.24-.4-.5-.77-.79-1.12l-.08-.09a.74.74 0 0 0-.17-.18c-.46-.35-.9-.67-1.32-.96-.45-.3-.9-.57-1.33-.82a10.8 10.8 0 0 0-1.72-.88c-1.33-.5-2.7-.8-4.22-.8a12.1 12.1 0 0 0-3.35.3c-.7.15-1.4.3-2.07.5-.7.2-1.38.45-2.03.73-.7.3-1.38.65-2.03 1.03-1.2.7-2.3 1.5-3.3 2.5-.6.6-1.1 1.3-1.6 2c-.5.8-.8 1.6-1 2.5a3.8 3.8 0 0 0-.08 1.15c.16 1.4.9 2.7 2 3.8 1.4 1.3 3.1 2.2 5.1 2.8.9.27 1.8.44 2.7.53l.3.03c.5.05 1 .05 1.5.02s.97-.08 1.45-.2z"/>
+                </svg>
+                <span class="text-xl font-bold text-gray-900">Distribuidora de gas El Lider</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Principal (Hero) -->
+        <section class="bg-blue-600 text-white py-12 sm:py-20 lg:py-24">
+            <div class="container text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                    ¡Distribuidora de gas El Lider!
+                </h1>
+                <p class="text-xl sm:text-2xl mb-8 font-light">
+                    Tu gas a domicilio en SMP, Los Olivos , Carmen de la Legua y Rímac.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección de Información (Características) -->
+        <section class="py-12 sm:py-20 bg-white">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                            Calidad y Confianza a Domicilio
+                        </h2>
+                        <p class="text-lg leading-relaxed mb-6 text-gray-600">
+                            En Distribuidora de gas El Lider, nos enorgullece ofrecerte el mejor servicio de reparto de gas a domicilio en la zona. Garantizamos una entrega rápida y segura, con productos de las marcas más reconocidas para tu total tranquilidad.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start space-x-3">
+                                <!-- Ícono de cheque SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span id="dynamic-delivery-text" class="text-lg text-gray-700"></span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Precios especiales para negocios y empresas con atención prioritaria.</span>
+                            </li>
+                             <li class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">Trabajamos con diferentes marcas reconocidas en el mercado, garantizando calidad.</span>
+                            </li>
+                             <li class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-lg text-gray-700">¡Por cada compra al contado para uso doméstico, reclama tu regalo de cortesía!</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="w-full h-auto rounded-xl shadow-xl flex items-center justify-center transition-transform transform hover:scale-105">
+                            <img src="MOTORIZADO.jpg" alt="Imagen de un motorizado de reparto de gas" class="w-full h-auto rounded-xl shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nueva Sección de Servicios -->
+        <section class="py-12 sm:py-20 bg-gray-100" id="services">
+            <div class="container text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                    Nuestros Servicios
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Nueva Tarjeta de Servicio 5kg -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón de 5kg">
+                        <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
+                           <img src="image_1f05d7.jpg" alt="Imagen de un balón de gas de 5 kg" class="w-full h-auto object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 mt-4">Balones de 5 Kilos</h3>
+                        <p class="text-gray-600">Ideales para espacios pequeños o para uso de una sola persona, con la calidad de siempre.</p>
+                    </div>
+                    <!-- Tarjeta de Servicio 10kg -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón de 10kg">
+                        <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
+                            <img src="image_1ef755.jpg" alt="Imagen de un balón de gas de 10 kg" class="w-full h-auto object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 mt-4">Entrega de Gas a Domicilio</h3>
+                        <p class="text-gray-600">Servicio de reparto rápido y seguro para tu hogar en toda nuestra zona de cobertura.</p>
+                    </div>
+                    <!-- Tarjeta de Servicio 45kg (Negocios) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón de 45kg">
+                         <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
+                            <img src="image_141172.jpg" alt="Imagen de balón de gas de 45kg para negocios" class="w-full h-auto object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 mt-4">Gas para Negocios y Empresas</h3>
+                        <p class="text-gray-600">Atención prioritaria y precios especiales para restaurantes, comedores y otros establecimientos.</p>
+                    </div>
+                    <!-- Tarjeta de Servicio 3: Balones para Montacargas -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Balón para montacargas">
+                         <div class="w-full overflow-hidden rounded-lg mb-4 flex items-center justify-center bg-gray-200">
+                            <img src="image_1e0a3a.jpg" alt="Imagen de un balón de gas para montacargas" class="w-full h-auto object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 mt-4">Balones para Montacargas</h3>
+                        <p class="text-gray-600">Abastecemos de gas GLP para montacargas industriales, con la calidad y seguridad que requieres.</p>
+                    </div>
+                    <!-- Tarjeta de Servicio 5: Instalación y Revisión -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer service-card" data-balon-type="Instalación y Revisión">
+                        <img src="image_139cf1.jpg" alt="Imagen de instalación y revisión de balones de gas" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2 mt-4">Servicio de Instalación y Revisión</h3>
+                        <p class="text-gray-600">Nuestro personal capacitado realiza la instalación segura y revisión de tus balones de gas, este servicio es completamente gratuito.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Formulario de Pedido -->
+        <section class="py-12 sm:py-20 bg-gray-100" id="order-form-section">
+            <div class="container text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                    Haz tu pedido ahora
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Llena este breve formulario y enviaremos tu pedido directamente a nuestro WhatsApp.
+                </p>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <form id="order-form" class="space-y-6">
+                        <div>
+                            <label for="nombre" class="block text-left text-sm font-medium text-gray-700">Nombre (Cliente o Empresa):</label>
+                            <input type="text" id="nombre" name="nombre" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="direccion" class="block text-left text-sm font-medium text-gray-700">Dirección de pedido:</label>
+                            <input type="text" id="direccion" name="direccion" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="piso" class="block text-left text-sm font-medium text-gray-700">Piso:</label>
+                            <select id="piso" name="piso" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                <option value="">Selecciona un piso</option>
+                                <!-- Generar opciones de piso del 1 al 15 con JavaScript -->
+                            </select>
+                        </div>
+                        <div>
+                            <label for="distrito" class="block text-left text-sm font-medium text-gray-700">Distrito:</label>
+                            <select id="distrito" name="distrito" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                <option value="">Selecciona un distrito</option>
+                                <option value="SMP">SMP</option>
+                                <option value="Carmen de la Legua">Carmen de la Legua</option>
+                                <option value="Los Olivos">Los Olivos</option>
+                                <option value="Rímac">Rímac</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="balon-tipo" class="block text-left text-sm font-medium text-gray-700">Selecciona el tipo de balón:</label>
+                            <select id="balon-tipo" name="balon-tipo" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                <option value="">Selecciona una opción</option>
+                                <option value="Balón de 5kg">Balón de 5kg</option>
+                                <option value="Balón de 10kg">Balón de 10kg</option>
+                                <option value="Balón para montacargas">Balón para montacargas</option>
+                                <option value="Balón de 45kg">Balón de 45kg</option>
+                            </select>
+                        </div>
+                        <div id="subopciones-10kg" class="hidden">
+                            <label for="sistema-10kg" class="block text-left text-sm font-medium text-gray-700">Sistema:</label>
+                            <select id="sistema-10kg" name="sistema-10kg" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                <option value="Normal">Normal</option>
+                                <option value="Premium">Premium</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                            Enviar Pedido por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="py-12 sm:py-20 bg-white">
+            <div class="container text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                    Contáctanos
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Llámanos o escríbenos a nuestro número de WhatsApp para cualquier consulta adicional.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="tel:990899295" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                        <span class="text-lg">Teléfono: 990 899 295</span>
+                    </a>
+                    <a href="https://wa.me/51990899295" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                        <span class="text-lg">WhatsApp: 990 899 295</span>
+                    </a>
+                </div>
+                <p class="mt-8 text-md text-gray-500">
+                    <span class="font-semibold">Ubicación:</span> Estamos en SMP a la altura de la cuadra 34 de la Avenida Perú
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="container text-center text-sm">
+            <p>&copy; 2024 Distribuidora de gas El Lider. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Llenar el select de pisos
+        const pisoSelect = document.getElementById('piso');
+        for (let i = 1; i <= 15; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            pisoSelect.appendChild(option);
+        }
+
+        const balonTipoSelect = document.getElementById('balon-tipo');
+        const subopcionesDiv = document.getElementById('subopciones-10kg');
+        const orderFormSection = document.getElementById('order-form-section');
+
+        balonTipoSelect.addEventListener('change', function() {
+            if (this.value === 'Balón de 10kg') {
+                subopcionesDiv.classList.remove('hidden');
+            } else {
+                subopcionesDiv.classList.add('hidden');
+            }
+        });
+
+        // Manejar el clic en las tarjetas de servicio
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const balonType = this.dataset.balonType;
+                
+                if (balonType === 'Instalación y Revisión') {
+                     // No es un tipo de balón, solo se desplaza al formulario
+                } else {
+                    balonTipoSelect.value = balonType;
+                    if (balonType === 'Balón de 10kg') {
+                        subopcionesDiv.classList.remove('hidden');
+                    } else {
+                        subopcionesDiv.classList.add('hidden');
+                    }
+                }
+                
+                orderFormSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        document.getElementById('order-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const direccion = document.getElementById('direccion').value;
+            const piso = document.getElementById('piso').value;
+            const distrito = document.getElementById('distrito').value;
+            const balonTipo = document.getElementById('balon-tipo').value;
+
+            let mensaje = `¡Hola! Soy *${nombre}* y me gustaría hacer un pedido.\n\n`;
+            
+            if (balonTipo === 'Instalación y Revisión') {
+                mensaje += `*Servicio:* ${balonTipo}\n`;
+            } else {
+                mensaje += `*Producto:* ${balonTipo}\n`;
+                if (balonTipo === 'Balón de 10kg') {
+                    const sistema = document.getElementById('sistema-10kg').value;
+                    mensaje += `*Sistema:* ${sistema}\n`;
+                }
+            }
+            
+            mensaje += `*Dirección:* ${direccion}\n`;
+            mensaje += `*Piso:* ${piso}\n`;
+            mensaje += `*Distrito:* ${distrito}\n`;
+
+            const whatsappUrl = `https://wa.me/51990899295?text=${encodeURIComponent(mensaje)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Script para la animación de texto dinámico
+        const dynamicTextElement = document.getElementById('dynamic-delivery-text');
+        const phrases = [
+            'Entrega rápida en los distritos de SMP, Los Olivos, Carmen de la Legua y Rímac.',
+            '¡Tu gas a la puerta de tu casa en menos de 20 minutos!',
+            'Servicio de delivery eficiente, seguro y puntual.',
+            'Con la mejor cobertura en la zona norte de Lima.'
+        ];
+        let phraseIndex = 0;
+
+        function updateDynamicText() {
+            dynamicTextElement.textContent = phrases[phraseIndex];
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+
+        updateDynamicText();
+        setInterval(updateDynamicText, 4000);
+    </script>
+</body>
+</html>
